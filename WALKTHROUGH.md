@@ -152,28 +152,43 @@ class CarInspectionService {
 
 All methods are `static`, meaning they can be called directly on the class without creating an instance.
 
-### Testing the CarInspectionService:
+### Comprehensive Testing of CarInspectionService:
 
-Add this code to test the inspection service:
+The project includes 13 comprehensive test cases covering all possible scenarios:
 
-```typescript
-// Test the CarInspectionService
-const testCar1 = new Car(4, 5, true, true);
-console.log("Test Car 1:", testCar1.toString());
-console.log("Passes inspection:", CarInspectionService.checkCar(testCar1)); // true
+#### **Passing Tests (2 tests)**
 
-const testCar2 = new Car(4, 4, true, true);
-console.log("Test Car 2:", testCar2.toString());
-console.log("Passes inspection:", CarInspectionService.checkCar(testCar2)); // false (4 doors)
+1. **Test 1**: Perfect car with 5 doors - All requirements met
+2. **Test 2**: Perfect car with 3 doors - All requirements met
 
-const testCar3 = new Car(3, 5, true, true);
-console.log("Test Car 3:", testCar3.toString());
-console.log("Passes inspection:", CarInspectionService.checkCar(testCar3)); // false (3 tires)
+#### **Failing Tests (11 tests)**
 
-const testCar4 = new Car(4, 3, false, true);
-console.log("Test Car 4:", testCar4.toString());
-console.log("Passes inspection:", CarInspectionService.checkCar(testCar4)); // false (no seatbelt)
-```
+**Tire Failures:** 3. **Test 3**: Only 3 tires (missing 1 tire) 4. **Test 4**: Too many tires (5 tires instead of 4) 5. **Test 13**: No tires at all (0 tires)
+
+**Door Failures:** 6. **Test 5**: Only 2 doors (needs 3 or 5) 7. **Test 6**: 4 doors (needs 3 or 5) 8. **Test 7**: Too many doors (6 doors)
+
+**Safety Feature Failures:** 9. **Test 8**: Missing seatbelt 10. **Test 9**: Missing airbag 11. **Test 10**: Missing both seatbelt and airbag
+
+**Multiple Failures:** 12. **Test 11**: Wrong tires (3) AND wrong doors (4) 13. **Test 12**: Everything wrong (2 tires, 2 doors, no safety features)
+
+#### **Test Output Format:**
+
+Each test displays:
+
+- Car description with all properties
+- Inspection result (true/false)
+- Expected result and reason for failure
+
+#### **Inspection Criteria Summary:**
+
+A car **PASSES** inspection if and only if:
+
+- ✓ Has exactly 4 tires
+- ✓ Has a seatbelt
+- ✓ Has an airbag
+- ✓ Has either 3 OR 5 doors
+
+All four conditions must be true for the car to pass.
 
 ---
 
