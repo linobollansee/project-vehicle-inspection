@@ -1,96 +1,163 @@
+/* Root element styles for the entire application | Root-Element-Stile für die gesamte Anwendung */
 :root {
+  /* Set font family with system fonts fallback | Setze Schriftfamilie mit System-Schriften als Fallback */
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* Set line height for text spacing | Setze Zeilenhöhe für Textabstand */
   line-height: 1.5;
+  /* Set base font weight to normal | Setze Basis-Schriftstärke auf normal */
   font-weight: 400;
 
+  /* Enable light and dark color scheme support | Aktiviere Unterstützung für helles und dunkles Farbschema */
   color-scheme: light dark;
+  /* Set text color with transparency | Setze Textfarbe mit Transparenz */
   color: rgba(255, 255, 255, 0.87);
+  /* Set dark background color | Setze dunkle Hintergrundfarbe */
   background-color: #242424;
 
+  /* Disable font synthesis for better rendering | Deaktiviere Schriftsynthese für besseres Rendering */
   font-synthesis: none;
+  /* Optimize text rendering for legibility | Optimiere Textdarstellung für Lesbarkeit */
   text-rendering: optimizeLegibility;
+  /* Enable font smoothing for WebKit browsers | Aktiviere Schriftglättung für WebKit-Browser */
   -webkit-font-smoothing: antialiased;
+  /* Enable font smoothing for Mozilla browsers | Aktiviere Schriftglättung für Mozilla-Browser */
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Styles for anchor/link elements | Stile für Anker-/Link-Elemente */
 a {
+  /* Set link font weight to medium | Setze Link-Schriftstärke auf mittel */
   font-weight: 500;
+  /* Set link color to blue | Setze Link-Farbe auf blau */
   color: #646cff;
+  /* Inherit text decoration from parent | Erbe Textdekoration vom Elternelement */
   text-decoration: inherit;
 }
+/* Hover state for links | Hover-Zustand für Links */
 a:hover {
+  /* Change link color on hover | Ändere Link-Farbe beim Darüberfahren */
   color: #535bf2;
 }
 
+/* Body element styles | Body-Element-Stile */
 body {
+  /* Remove default margin | Entferne Standardabstand */
   margin: 0;
+  /* Use flexbox layout | Verwende Flexbox-Layout */
   display: flex;
+  /* Center items horizontally and vertically | Zentriere Elemente horizontal und vertikal */
   place-items: center;
+  /* Set minimum width | Setze Mindestbreite */
   min-width: 320px;
+  /* Set minimum height to full viewport | Setze Mindesthöhe auf volle Ansicht */
   min-height: 100vh;
 }
 
+/* Heading 1 styles | Überschrift 1 Stile */
 h1 {
+  /* Set large font size | Setze große Schriftgröße */
   font-size: 3.2em;
+  /* Set line height for heading | Setze Zeilenhöhe für Überschrift */
   line-height: 1.1;
 }
 
+/* Main app container styles | Hauptcontainer-Stile für App */
 #app {
+  /* Set maximum width | Setze maximale Breite */
   max-width: 1280px;
+  /* Center the container horizontally | Zentriere den Container horizontal */
   margin: 0 auto;
+  /* Add padding around content | Füge Abstand um Inhalt hinzu */
   padding: 2rem;
+  /* Center text alignment | Zentriere Textausrichtung */
   text-align: center;
 }
 
+/* Logo image styles | Logo-Bild-Stile */
 .logo {
+  /* Set logo height | Setze Logo-Höhe */
   height: 6em;
+  /* Add padding around logo | Füge Abstand um Logo hinzu */
   padding: 1.5em;
+  /* Hint browser about filter changes for optimization | Weise Browser auf Filteränderungen zur Optimierung hin */
   will-change: filter;
+  /* Add smooth transition for filter effect | Füge sanften Übergang für Filtereffekt hinzu */
   transition: filter 300ms;
 }
+/* Hover state for logo | Hover-Zustand für Logo */
 .logo:hover {
+  /* Apply blue glow shadow on hover | Wende blaues Leuchten beim Darüberfahren an */
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+/* Hover state for vanilla TypeScript logo | Hover-Zustand für Vanilla-TypeScript-Logo */
 .logo.vanilla:hover {
+  /* Apply TypeScript blue glow shadow on hover | Wende TypeScript-blaues Leuchten beim Darüberfahren an */
   filter: drop-shadow(0 0 2em #3178c6aa);
 }
 
+/* Card container styles | Karten-Container-Stile */
 .card {
+  /* Add padding inside card | Füge Abstand innerhalb der Karte hinzu */
   padding: 2em;
 }
 
+/* Read the docs text styles | Lies-die-Docs-Text-Stile */
 .read-the-docs {
+  /* Set gray text color | Setze graue Textfarbe */
   color: #888;
 }
 
+/* Button element styles | Button-Element-Stile */
 button {
+  /* Round button corners | Runde Button-Ecken ab */
   border-radius: 8px;
+  /* Set transparent border | Setze transparente Umrandung */
   border: 1px solid transparent;
+  /* Add padding inside button | Füge Abstand innerhalb des Buttons hinzu */
   padding: 0.6em 1.2em;
+  /* Set button font size | Setze Button-Schriftgröße */
   font-size: 1em;
+  /* Set button font weight | Setze Button-Schriftstärke */
   font-weight: 500;
+  /* Inherit font family from parent | Erbe Schriftfamilie vom Elternelement */
   font-family: inherit;
+  /* Set dark background color | Setze dunkle Hintergrundfarbe */
   background-color: #1a1a1a;
+  /* Change cursor to pointer on hover | Ändere Cursor zu Zeiger beim Darüberfahren */
   cursor: pointer;
+  /* Add smooth transition for border color | Füge sanften Übergang für Rahmenfarbe hinzu */
   transition: border-color 0.25s;
 }
+/* Hover state for button | Hover-Zustand für Button */
 button:hover {
+  /* Change border color on hover | Ändere Rahmenfarbe beim Darüberfahren */
   border-color: #646cff;
 }
+/* Focus state for button | Fokus-Zustand für Button */
 button:focus,
+/* Visible focus state for button | Sichtbarer Fokus-Zustand für Button */
 button:focus-visible {
+  /* Add outline for accessibility | Füge Umriss für Barrierefreiheit hinzu */
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Media query for light color scheme preference | Medienabfrage für Präferenz des hellen Farbschemas */
 @media (prefers-color-scheme: light) {
+  /* Root element styles in light mode | Root-Element-Stile im hellen Modus */
   :root {
+    /* Set dark text color for light mode | Setze dunkle Textfarbe für hellen Modus */
     color: #213547;
+    /* Set white background for light mode | Setze weißen Hintergrund für hellen Modus */
     background-color: #ffffff;
   }
+  /* Link hover state in light mode | Link-Hover-Zustand im hellen Modus */
   a:hover {
+    /* Change link color on hover in light mode | Ändere Link-Farbe beim Darüberfahren im hellen Modus */
     color: #747bff;
   }
+  /* Button styles in light mode | Button-Stile im hellen Modus */
   button {
+    /* Set light background color for button | Setze helle Hintergrundfarbe für Button */
     background-color: #f9f9f9;
   }
 }
